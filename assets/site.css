@@ -74,8 +74,6 @@ mark.confirm {
   box-decoration-break: clone;
 }
 
-.draft-bar { background: var(--ink); color: #F2F2EE; padding: 7px 16px; }
-.draft-bar p { margin: 0 auto; max-width: max-content; font: 500 .82rem/1.45 var(--font); text-align: center; }
 
 /* Grid paper */
 .sheet, .spread {
