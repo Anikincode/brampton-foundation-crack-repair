@@ -162,6 +162,7 @@ mark.confirm {
 /* Fig. 1 */
 .fig1 { margin: 24px 0 0; }
 .fig1-art { display: block; width: 100%; max-width: 540px; margin: 0 auto; fill: none; }
+.fig1-photo { display: block; width: 100%; max-width: 540px; height: auto; aspect-ratio: 4 / 3; object-fit: cover; margin: 0 auto; border: 2px solid var(--ink); background: var(--cover-shade); }
 .fig1 .paper { fill: var(--page); }
 .fig1 .ink { stroke: var(--ink); }
 .fig1-ties circle { fill: #98A19F; }
