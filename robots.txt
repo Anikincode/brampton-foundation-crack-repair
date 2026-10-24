@@ -1,3 +1,4 @@
-# Draft build: keep crawlers out until launch.
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://bramptonfoundationcrackrepair.ca/sitemap.xml
