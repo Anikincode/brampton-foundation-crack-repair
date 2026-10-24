@@ -100,7 +100,7 @@ mark.confirm {
 .call-label:hover, .call-label:focus-visible { background: var(--ink); color: #fff; }
 .call-label-big { padding: 12px 22px 16px; gap: 6px; }
 .call-label-big .call-label-head { font-size: .78rem; padding-bottom: 6px; }
-.call-label-big .call-label-num { font-size: clamp(1.9rem, 3.4vw, 2.7rem); letter-spacing: -.01em; }
+.call-label-big .call-label-num { font-size: clamp(1.9rem, 3.6vw, 3.25rem); letter-spacing: -.01em; }
 .call-label mark.confirm { font-size: .5em; }
 
 .quote-link { font-weight: 700; text-decoration-color: currentColor; }
@@ -133,6 +133,7 @@ mark.confirm {
 }
 .site-nav li:hover > .sub, .site-nav li:focus-within > .sub { display: block; }
 
+.nav-pg { font-size: .72rem; font-weight: 700; color: var(--cover-ink-2); margin-left: 5px; font-variant-numeric: tabular-nums; }
 .toc { display: flex; align-items: baseline; gap: 8px; padding: 6px 0; color: var(--ink); text-decoration: none; font-size: .95rem; }
 .toc-l { display: flex; flex: 1; align-items: baseline; min-width: 0; }
 .toc-l::after { content: ""; flex: 1; min-width: 16px; margin: 0 2px 0 8px; border-bottom: 2px dotted var(--ink-3); transform: translateY(-.25em); }
@@ -146,8 +147,9 @@ mark.confirm {
 .spread { position: relative; }
 .spread::before { content: ""; position: absolute; inset: 0 50% 0 0; background: var(--cover); }
 .spread-row { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-.cover { padding: 56px 56px 64px 0; display: flex; flex-direction: column; align-items: flex-start; }
-.cover h1 { font-size: clamp(2.4rem, 3.75vw, 3.4rem); text-transform: uppercase; font-stretch: 108%; line-height: .98; }
+.cover { padding: 56px 40px 64px 0; display: flex; flex-direction: column; align-items: flex-start; }
+.cover h1, .page-head h1 { text-transform: uppercase; font-stretch: 108%; line-height: .98; }
+.cover h1 { font-size: clamp(2.4rem, 4.45vw, 4rem); font-stretch: 102%; }
 .cover .lede { font-size: 1.16rem; line-height: 1.5; max-width: 42ch; margin: 24px 0 32px; }
 .cover-actions { display: grid; justify-items: start; gap: 14px; }
 .cover-facts { margin: 32px 0 0; padding-top: 12px; border-top: 1.5px solid var(--ink); font-size: .9rem; color: var(--cover-ink-2); align-self: stretch; }
@@ -168,7 +170,7 @@ mark.confirm {
 .fig1-port circle { fill: var(--ink); }
 .fig1-drops { fill: var(--water); opacity: 0; }
 .fig1-labels text { fill: var(--ink); font: 700 13.5px var(--font); font-stretch: 87%; letter-spacing: .06em; paint-order: stroke; stroke: var(--page); stroke-width: 4px; stroke-linejoin: round; }
-.fig1-labels .fig1-title { font-size: 12px; fill: var(--ink-3); letter-spacing: .1em; }
+.fig1-labels .fig1-title { font-size: 13px; fill: var(--ink-3); letter-spacing: .1em; }
 .fig1-labels .fig1-a { font-size: 15px; font-weight: 800; }
 .fig1-leaking { opacity: 0; }
 .fig1 figcaption { max-width: 540px; margin: 16px auto 0; font-size: .93rem; color: var(--ink-2); }
@@ -185,7 +187,7 @@ mark.confirm {
 .page-head { background: var(--cover); }
 .page-head .wrap { padding-block: 20px 48px; }
 .page-head .lede { font-size: 1.14rem; line-height: 1.55; max-width: 60ch; margin: 18px 0 0; }
-.page-head h1 { max-width: 22ch; }
+.page-head h1 { font-size: clamp(2rem, 3.6vw, 3.25rem); max-width: 17em; }
 .head-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 28px; }
 .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 8px; margin: 0 0 28px; padding: 0; font-size: .72rem; color: var(--cover-ink-2); }
 .crumbs li + li::before { content: "/"; margin-right: 8px; }
@@ -375,6 +377,13 @@ input[type="file"]::file-selector-button { font: 700 .9rem var(--font); margin-r
   .footer-index { grid-template-columns: 1fr 1fr; }
 }
 
+@media (max-width: 600px) {
+  .fig1-art { max-width: none; width: calc(100% + var(--gutter)); margin-inline: calc(-.5 * var(--gutter)); }
+  .fig1-labels text { font-size: 17px; }
+  .fig1-labels .fig1-title { font-size: 16.5px; }
+  .fig1-labels .fig1-a { font-size: 17px; }
+}
+
 @media (max-width: 520px) {
   body { font-size: 1rem; }
   .cover h1 { font-size: clamp(2.1rem, 10.4vw, 2.6rem); }
@@ -389,8 +398,6 @@ input[type="file"]::file-selector-button { font: 700 .9rem var(--font); margin-r
   .footer-index { grid-template-columns: 1fr; }
   .brand-name { font-size: .94rem; }
   .gauge-zones { font-size: .74rem; }
-  .fig1-labels text { font-size: 15px; }
-  .fig1-labels .fig1-title { font-size: 13px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
