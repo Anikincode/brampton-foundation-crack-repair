@@ -117,7 +117,8 @@ mark.confirm {
 .site-header { background: var(--cover); position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; box-shadow: 0 1px 0 rgba(21, 21, 20, .2); }
 .header-row { display: flex; align-items: center; gap: 20px; min-height: 72px; position: relative; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; margin-right: auto; }
-.brand svg { width: 36px; height: 36px; flex: none; }
+.brand-logo { display: grid; place-items: center; width: 52px; height: 52px; flex: none; background: #fff; border: 2px solid var(--ink); }
+.brand-logo img { width: auto; height: 40px; }
 .brand-name { font-weight: 800; font-stretch: 112%; font-size: 1.04rem; line-height: 1.05; }
 .brand-name span { display: block; font-weight: 700; font-stretch: 125%; font-size: .7rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 3px; }
 
